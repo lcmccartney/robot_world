@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="stylesheet.css">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+  <title>Robot World</title>
+</head>
+<body>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="/"><span class="glyphicon glyphicon-qrcode"></span> ROBOT WORLD</a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li><a class="nav-item nav-link" href="/"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+        <li><a class="nav-item nav-link" href="/robots"><span class="glyphicon glyphicon-list"></span> Directory</a></li>
+        <li><a class="nav-item nav-link" href="/robots/new"><span class="glyphicon glyphicon-star"></span> Create New</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container">
+    <%= yield %>
+  </div>
+
+  <script src="jquery/jquery-2.0.3.min.js"></script>
+  <script src="bootstrap/bootstrap-2.3.1.min.js"></script>
+</body>
+</html>
