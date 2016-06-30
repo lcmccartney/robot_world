@@ -48,4 +48,12 @@ robots:
   birthdate: 03/05/1994
   date_hired: 11/12/2013
   department: Software
-total: 9
+- id: 10
+  name: George
+  city: Miami
+  state: FL
+  avatar: 
+  birthdate: '2014-10-29'
+  date_hired: 06/27/2016
+  department: Defense
+total: 10
