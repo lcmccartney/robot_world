@@ -1,25 +1,65 @@
-<div class="col-md-8" align="center">
-  <div class="jumbotron">
-    <h2>Hire a Robot in 4,378 easy steps</h2>
-    <div class="well">
-      <a href="/robots">
-        <button type="button" class="btn btn-warning">
-          <span class="glyphicon glyphicon-list"></span> Robot Directory
-        </button>
-      </a>
-      |
-      <a href="/robots/new">
-        <button type="button" class="btn btn-success">
-          <span class="glyphicon glyphicon-star"></span> New Robot
-        </button>
-      </a>
-    </div>
+<div class="jumbotron">
+  <h2>The average age of a robot in Robot World is <%= robot_world.average_age %>.</h2>
+  <div class="well">
+    <a href="/robots">
+      <button type="button" class="btn btn-warning">
+        <span class="glyphicon glyphicon-list"></span> Robot Directory
+      </button>
+    </a>
+    |
+    <a href="/robots/new">
+      <button type="button" class="btn btn-success">
+        <span class="glyphicon glyphicon-star"></span> New Robot
+      </button>
+    </a>
+  </div>
+</div>
 
-    <h4>Average Age of robots on Robot World: 29</h4>
-
-      <!-- <% @robots.each do |robot| %>
-      <%= robot.birthdate %>
-      <% end %> -->
-    <h4>There are currently <strong><u><%= robot_world.all.count %></u></strong> robots in Robot World.</h4>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-6 col-sm-3">
+        <div class="panel panel-primary">
+          <div class="panel-heading">Robot Hired By Year</div>
+          <div class="panel-body">
+            <% robot_world.hired_by_year.each do |year, count| %>
+            <p><%= year %>: <%= count %></p>
+            <% end %>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-6 col-sm-3">
+        <div class="panel panel-primary">
+          <div class="panel-heading">Robot Location: City</div>
+          <div class="panel-body">
+            <% robot_world.count_by_city.each do |city, count| %>
+            <p><%= city %>: <%= count %></p>
+            <% end %>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-6 col-sm-3">
+        <div class="panel panel-primary">
+          <div class="panel-heading">Robot Location: State</div>
+          <div class="panel-body">
+            <% robot_world.hired_by_year.each do |year, count| %>
+            <p><%= year %>: <%= count %></p>
+            <% end %>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-6 col-sm-3">
+        <div class="panel panel-primary">
+          <div class="panel-heading">Robots in Department</div>
+          <div class="panel-body">
+            <% robot_world.count_by_department.each do |dept, count| %>
+            <p><%= dept %>: <%= count %></p>
+            <% end %>
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
+
+  <div class = "well">
+    <h4>There are currently <%= robot_world.all.count %> robots in Robot World.</h4>
   </div>

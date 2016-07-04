@@ -1,11 +1,35 @@
 <div class = "well">
   <form action="/robots/<%= @robot.id %>" method="post">
-    <h1>Edit</h1>
     <input type="hidden" name="_method" value="PUT" />
-    <p><input type='text' name='robot[name]' value="<%= @robot.name %>"/></p>
-    <p><input type='text' name='robot[city]' value="<%= @robot.city %>"/></p>
-    <p><input type='text' name='robot[state]' value="<%= @robot.state %>"/></p>
-    <p><input type='text' name='robot[department]' value="<%= @robot.department %>"/></p>
-    <input type='submit'/>
+    <h4>Edit Robot Information</h4>
+    <table>
+      <tr>
+        <td>Name:</td>
+        <td><input type='text' name='robot[name]' value="<%= @robot.name %>"/></td>
+      </tr>
+      <tr>
+        <td>City:</td>
+        <td><input type='text' name='robot[city]' value="<%= @robot.city %>"></td>
+      </tr>
+      <tr>
+        <td>State:</td>
+        <td><input type='text' name='robot[state]' value="<%= @robot.state %>"></td>
+      </tr>
+      <tr>
+        <td>Birthdate:</td>
+        <td><input type='date' name='robot[birthdate]'></td>
+      </tr>
+      <tr>
+        <td>Date Hired:</td>
+        <td><input type='date' name='robot[date_hired]' value="<%= @robot.date_hired %>"></td>
+      </tr>
+      <tr>
+        <td>Department:</td>
+        <td><input type='text' name='robot[department]' value="<%= @robot.department %>"></td>
+      </tr>
+      <tr>
+        <td><br><input type='submit'></td>
+      </tr>
+    </table>
   </form>
 </div>
